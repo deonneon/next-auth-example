@@ -24,7 +24,7 @@ import NextAuth from "next-auth";
 // import Fusionauth from "next-auth/providers/fusionauth"
 import GitHub from "next-auth/providers/github";
 // import Gitlab from "next-auth/providers/gitlab"
-// import Google from "next-auth/providers/google"
+import Google from "next-auth/providers/google";
 // import Hubspot from "next-auth/providers/hubspot"
 // import Instagram from "next-auth/providers/instagram"
 // import Kakao from "next-auth/providers/kakao"
@@ -97,7 +97,10 @@ export const config = {
       clientSecret: process.env.AUTH_GITHUB_SECRET,
     }),
     // Gitlab,
-    // Google,
+    Google({
+      clientId: process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET,
+    }),
     // Hubspot,
     // Instagram,
     // Kakao,
