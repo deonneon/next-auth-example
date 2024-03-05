@@ -139,6 +139,7 @@ export const config = {
     // Zoho,
     // Zoom,
   ],
+  trustHost: true,
   basePath: "/api/auth",
   callbacks: {
     authorized({ request, auth }) {
